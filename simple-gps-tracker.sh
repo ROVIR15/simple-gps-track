@@ -46,6 +46,6 @@ payload=$(jq -n \
   '{timestamp: $ts, device_id: $dev, location: {latitude: $lat, longitude: $lon, accuracy: $acc}}')
 
 # Send POST request to server
-curl -X POST https://50cb-2a09-bac1-34a0-50-00-3c3-48.ngrok-free.app \
+curl -X POST https://50cb-2a09-bac1-34a0-50-00-3c3-48.ngrok-free.app/v1/track \
   -H "Content-Type: application/json" \
   -d "$payload"
